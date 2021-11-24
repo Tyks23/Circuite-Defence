@@ -26,13 +26,14 @@ public class Tower : MonoBehaviour
 
         foreach (GameObject enemy in Enemies.enemies)
         {
-            float _distance = (transform.position + enemy.transform.position).magnitude;
+            float _distance = Vector3.Distance(enemy.transform.position, transform.position);
 
-            if(_distance < distance)
+            if( _distance < distance)
             {
                 distance = _distance;
                 currentNearestEnemy = enemy;
             }
+
             else
             {
                 currentTarget = null;

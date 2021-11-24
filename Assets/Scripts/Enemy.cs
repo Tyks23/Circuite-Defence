@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private float enemyHealth;
+
     [SerializeField]
     private float movementSpeed;
 
@@ -59,7 +60,7 @@ public class Enemy : MonoBehaviour
 
             if(distance < 0.001f)
             {
-                int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile) + 1;
+                int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile);
 
                 targetTile = MapGenerator.pathTiles[currentIndex + 1];
             }
