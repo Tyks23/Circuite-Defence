@@ -49,8 +49,10 @@ public class RoundController : MonoBehaviour
             {
                 isStartOfRound = false;
                 isRoundGoing = true;
-
                 SpawnEnemies();
+                    
+                
+                
                 return;
             }
         }
