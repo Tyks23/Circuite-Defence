@@ -94,13 +94,20 @@ public class MapGenerator : MonoBehaviour
         List<GameObject> topEdgeTiles = getTopEdgeTiles();
         List<GameObject> bottomEdgeTiles = getBottomEdgeTiles();
 
+<<<<<<< Updated upstream
         int start = 1;
         int end = 5;
+=======
+        int start = Random.Range(0, mapWidth);
+        int end = Random.Range (0, mapWidth);
+>>>>>>> Stashed changes
 
         startTile = topEdgeTiles[start];
         endTile = bottomEdgeTiles[end];
 
         currentTile = startTile;
+
+        moveDown();
 
         int loopCount = 0;
 
