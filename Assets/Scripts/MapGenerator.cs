@@ -114,8 +114,7 @@ public class MapGenerator : MonoBehaviour
             }
 
             if (currentTile.transform.position.x > endTile.transform.position.x)
-            {
-                
+            { 
                 moveLeft();
             }
             else if(currentTile.transform.position.x < endTile.transform.position.x)

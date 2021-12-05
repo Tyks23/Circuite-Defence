@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
     {
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
+        Currency.currency += 10;
     }
 
     private void moveEnemy()
