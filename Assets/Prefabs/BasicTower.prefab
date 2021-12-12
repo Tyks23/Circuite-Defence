@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7978027262587439142}
   - component: {fileID: 2588818361765408718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 3896941273364481352}
   - component: {fileID: 5743746096233291700}
   - component: {fileID: 7225703661872976282}
-  m_Layer: 0
+  - component: {fileID: 8151150967714982024}
+  m_Layer: 8
   m_Name: BasicTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,9 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9608824253158834d8f6dae1d523d607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
-  damage: 25
-  timeBetweenShots: 1
+  range: 4
+  damage: 50
+  timeBetweenShots: 1.5
   currentTarget: {fileID: 0}
   pivot: {fileID: 8794593664974801296}
   barrel: {fileID: 7978027262587439142}
@@ -201,6 +202,32 @@ MonoBehaviour:
   pivot: {fileID: 8794593664974801296}
   barrel: {fileID: 7978027262587439142}
   tower: {fileID: 5743746096233291700}
+--- !u!61 &8151150967714982024
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6753133145860118971}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &7082190548984866230
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8794593664974801296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
