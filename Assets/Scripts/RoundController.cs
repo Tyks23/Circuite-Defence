@@ -31,7 +31,6 @@ public class RoundController : MonoBehaviour
         for (int i = 0; i < waveNumber; i++)
         {
             SpawnEnemy();
-            Debug.Log("in enumerator" + waveNumber);
             yield return new WaitForSeconds(0.9f);
         }
 
