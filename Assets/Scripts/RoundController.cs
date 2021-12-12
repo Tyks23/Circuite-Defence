@@ -1,83 +1,45 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoundController : MonoBehaviour
 {
     public GameObject basicEnemy;
 
-    public float timeBetweenWaves;
+    public float timeBetweenWaves = 5f;
     public float timeBeforeRoundStarts;
-    public float timeVariable;
+    private float countdown = 2f;
 
-    public bool isRoundGoing;
-    public bool isIntermission;
-    public bool isStartOfRound;
+    public Text WaveCountdown;
+    public Text WaveNumber;
 
-    public int round;
+    private int waveNumber = 0;
 
-    private void Start()
+    void Update()
     {
-        isRoundGoing = false;
-        isIntermission = false;
-        isStartOfRound = true;
+        if( countdown <= 0f){
+            StartCoroutine("SpawnWave");
+            countdown = timeBetweenWaves;
+        }
 
-        timeVariable = Time.time + timeBeforeRoundStarts;
-
-        round = 1;
+        countdown -= Time.deltaTime;
+        WaveCountdown.text = Mathf.Floor(countdown).ToString();
     }
 
-    private void SpawnEnemies()
-    {
+    IEnumerator SpawnWave(){
+        waveNumber++;
+        for (int i = 0; i < waveNumber; i++)
+        {
+            SpawnEnemy();
+            Debug.Log("in enumerator" + waveNumber);
+            yield return new WaitForSeconds(0.9f);
+        }
+
+
+        WaveNumber.text = waveNumber.ToString();
+    }
+
+    void SpawnEnemy(){
         GameObject newEnemy = Instantiate(basicEnemy, MapGenerator.startTile.transform.position, Quaternion.identity);
-        StartCoroutine("ISpawnEnemies");
-    }
-
-    IEnumerator ISpawnEnemies()
-    {
-        for (int i = 0; i < round; i++)
-        {
-            yield return new WaitForSeconds(1f);
-        }
-    }
-
-    private void Update()
-    {
-        if (isStartOfRound)
-        {
-            if (Time.time >= timeVariable)
-            {
-                isStartOfRound = false;
-                isRoundGoing = true;
-                SpawnEnemies();
-                
-                return;
-            }
-        }
-        else if (isIntermission)
-        {
-            if (Time.time >= timeVariable)
-            {
-                isIntermission = false;
-                isRoundGoing = true;
-
-                SpawnEnemies();
-            }
-        }
-        else if (isRoundGoing)
-        {
-            if(Enemies.enemies.Count > 0)
-            {
-
-            }
-            else
-            {
-                isIntermission = true;
-                isRoundGoing = false;
-
-                timeVariable = Time.time + timeBetweenWaves;
-                round++;
-            }
-        }
     }
 }

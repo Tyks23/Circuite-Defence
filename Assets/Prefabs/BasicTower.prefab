@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 4
   damage: 50
-  timeBetweenShots: 1.5
+  timeBetweenShots: 1.3
   currentTarget: {fileID: 0}
   pivot: {fileID: 8794593664974801296}
   barrel: {fileID: 7978027262587439142}
