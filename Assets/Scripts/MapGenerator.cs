@@ -105,6 +105,8 @@ public class MapGenerator : MonoBehaviour
 
         currentTile = startTile;
 
+        moveDown();
+
         int loopCount = 0;
 
         while (!reachedX)
