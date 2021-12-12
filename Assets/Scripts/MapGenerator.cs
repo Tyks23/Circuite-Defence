@@ -94,20 +94,16 @@ public class MapGenerator : MonoBehaviour
         List<GameObject> topEdgeTiles = getTopEdgeTiles();
         List<GameObject> bottomEdgeTiles = getBottomEdgeTiles();
 
-<<<<<<< Updated upstream
-        int start = 1;
-        int end = 5;
-=======
+        //int start = 0;
+        //int end = 0;
+
         int start = Random.Range(0, mapWidth);
-        int end = Random.Range (0, mapWidth);
->>>>>>> Stashed changes
+        int end = Random.Range(0, mapWidth);
 
         startTile = topEdgeTiles[start];
         endTile = bottomEdgeTiles[end];
 
         currentTile = startTile;
-
-        moveDown();
 
         int loopCount = 0;
 
@@ -139,25 +135,6 @@ public class MapGenerator : MonoBehaviour
             if(currentTile.transform.position.y > endTile.transform.position.y)
             {
                 moveDown();
-                moveDown();
-                moveLeft();
-                moveLeft();
-                moveLeft();
-                moveLeft();
-                moveLeft();
-                moveDown();
-                moveDown();
-                moveRight();
-                moveRight();
-                moveRight();
-                moveRight();
-                moveRight();
-                moveDown();
-                moveDown();
-                moveDown();
-                
-               
-
             }
             else
             {

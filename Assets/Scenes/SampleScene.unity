@@ -222,7 +222,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -246,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 2.13, y: 1.12, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -388,8 +388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapTile: {fileID: 4965700095893934644, guid: 351f8f6909589dd4187453524f8f10e7, type: 3}
-  mapWidth: 8
-  mapHeight: 8
+  mapWidth: 10
+  mapHeight: 7
   startColor: {r: 0, g: 1, b: 0.076129675, a: 1}
   endColor: {r: 0.9056604, g: 0, b: 0, a: 1}
   pathColor: {r: 0.2716736, g: 0.5943396, b: 0.09812209, a: 1}
