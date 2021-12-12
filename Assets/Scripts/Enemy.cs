@@ -42,10 +42,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void reachedEnd() {
+        Enemies.enemies.Remove(gameObject);
+        Destroy(transform.gameObject);
+        Health.health -= 1;
+    }
+
     private void die()
     {
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
+        Currency.currency += 10;
     }
 
     private void moveEnemy()
@@ -57,14 +64,26 @@ public class Enemy : MonoBehaviour
     {
         if(targetTile != null && targetTile != MapGenerator.endTile)
         {
-            float distance = (transform.position - targetTile.transform.position).magnitude;
+            float distance = Vector3.Distance(targetTile.transform.position, transform.position);
 
             if(distance < 0.001f)
             {
                 int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile);
 
-                targetTile = MapGenerator.pathTiles[currentIndex + 1];
+            // Temporary fix
+                try {
+                    targetTile = MapGenerator.pathTiles[currentIndex + 1];
+                }
+                catch (System.ArgumentOutOfRangeException e) {
+                    reachedEnd();
+                    Debug.Log("Enemy reached the endtile");
+                }
+                
+            
             }
+        }
+        else {
+            Debug.Log("Test");
         }
     }
 
