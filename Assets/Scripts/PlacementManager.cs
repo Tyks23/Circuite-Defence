@@ -8,6 +8,8 @@ public class PlacementManager : MonoBehaviour
     public GameObject basicTowerObject;
     public GameObject dummyPlacement;
     public ShopManager shopManager;
+
+    private GameObject currentTowerPlacing;
     
     public Camera cam;
 
@@ -19,7 +21,6 @@ public class PlacementManager : MonoBehaviour
     public bool isBuilding;
 
     public void Start(){
-        StartBuilding();
     }
 
     public Vector2 GetMousePosition(){
@@ -60,16 +61,19 @@ public class PlacementManager : MonoBehaviour
     public void PlaceBuilding(){
 
         if(hoverTile != null){
-            if(CheckForTower() == false){
-                if(shopManager.CanBuyTower(basicTowerObject) == true){
 
-                    GameObject newTowerObject = Instantiate(basicTowerObject);
+            if(CheckForTower() == false){
+
+                if(shopManager.CanBuyTower(currentTowerPlacing) == true){
+
+                    GameObject newTowerObject = Instantiate(currentTowerPlacing);
                     newTowerObject.layer = LayerMask.NameToLayer("Tower");
                     newTowerObject.transform.position = hoverTile.transform.position;
 
                     EndBuilding();
-                    shopManager.BuyTower(basicTowerObject);
+                    shopManager.BuyTower(currentTowerPlacing);
                 }
+
             }else{
                 Debug.Log("Not enough money! Can't buy this tower yet");
             }
@@ -77,11 +81,15 @@ public class PlacementManager : MonoBehaviour
 
     }
 
-    public void StartBuilding(){
+
+
+    public void StartBuilding(GameObject towerToBuild){
 
         isBuilding = true;
 
-        dummyPlacement = Instantiate(basicTowerObject);
+        currentTowerPlacing = towerToBuild;
+
+        dummyPlacement = Instantiate(currentTowerPlacing);
 
         if(dummyPlacement.GetComponent<Tower>() != null){
             Destroy(dummyPlacement.GetComponent<Tower>());
@@ -90,6 +98,8 @@ public class PlacementManager : MonoBehaviour
         if(dummyPlacement.GetComponent<BarrelRotation>() != null){
             Destroy(dummyPlacement.GetComponent<BarrelRotation>());
         }
+
+
     }
 
     public void EndBuilding(){
