@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+
+    [SerializeField]private float speed;
+
     private void Start()
     {
         Destroy(gameObject, 3f);
@@ -16,6 +19,6 @@ public class Bullet : MonoBehaviour
           
     private void Update()
     {
-        transform.position += transform.right * 0.18f;
+        transform.position += transform.right * speed;
     }
 }
