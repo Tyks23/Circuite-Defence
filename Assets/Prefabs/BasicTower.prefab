@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3415377934598404583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2367, y: 0.009, z: 0}
-  m_LocalScale: {x: 0.53248626, y: 0.1297045, z: 1}
+  m_LocalPosition: {x: 0.03118, y: 0.00207, z: 0}
+  m_LocalScale: {x: 0.12143966, y: 0.038241796, z: 1}
   m_Children: []
   m_Father: {fileID: 8794593664974801296}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 66e4fe0bd85abb6468f37da901d141b7, type: 3}
-  m_Color: {r: 0.9622642, g: 0.077162705, b: 0.077162705, a: 0.9647059}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,8 +110,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6753133145860118971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0.14, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalPosition: {x: 0.088, y: -0.5, z: 0}
+  m_LocalScale: {x: 6.351238, y: 6.194418, z: 1}
   m_Children:
   - {fileID: 8794593664974801296}
   m_Father: {fileID: 0}
@@ -157,8 +157,8 @@ SpriteRenderer:
   m_SortingLayerID: 1255525601
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a1ebb906cf111140bbe90af84827e8d, type: 3}
-  m_Color: {r: 0.045188453, g: 0, b: 0.735849, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ade6c0bf6f0869d4b8bd99f6e02d2308, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -212,21 +212,21 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.16, y: 0.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
 --- !u!1 &7082190548984866230
 GameObject:
