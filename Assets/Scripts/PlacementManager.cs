@@ -13,7 +13,8 @@ public class PlacementManager : MonoBehaviour
     public Currency currency;
     public Computing computer;
     public Power power;
-    public Tower tower;
+    private int towerCost;
+    //public Tower tower;
 
     private GameObject currentTowerPlacing;
     
@@ -52,6 +53,7 @@ public class PlacementManager : MonoBehaviour
     }
 
     public bool CheckForTower(){
+
         Vector2 mousePosition = GetMousePosition();
         bool towerOnSlot = false;
 
@@ -64,27 +66,24 @@ public class PlacementManager : MonoBehaviour
         return towerOnSlot;
     }
 
+
     public void PlaceBuilding(){
+
+        //towerCost = Instantiate(currentTowerPlacing).GetComponent<Tower>().getCost();
 
         if(hoverTile != null){
 
-            if(CheckForTower() == false){
+            if(CheckForTower() == false && currency.getCurrency() >= towerCost){
 
-                if(currency.getCurrency() >= tower.getCost() && power.getPowerCap() >= power.getPowerUsage()){
+                GameObject newTowerObject = Instantiate(currentTowerPlacing);
+                Debug.Log("Tower being built" + newTowerObject);
+                newTowerObject.layer = LayerMask.NameToLayer("Tower");
+                newTowerObject.transform.position = hoverTile.transform.position;
 
-                    GameObject newTowerObject = Instantiate(currentTowerPlacing);
-                    newTowerObject.layer = LayerMask.NameToLayer("Tower");
-                    newTowerObject.transform.position = hoverTile.transform.position;
-
-                    EndBuilding();
-                    shopManager.BuyTower(currentTowerPlacing);
-                    currency.removeCurrency(tower.getCost());
-                    power.addPowerusage(5);
-                }else{
-                    //currency.currencyText.text = string.Format("<color=lime>{0}</color>", currency.getCurrency());
-                    Debug.Log("Not enough money");
-                }
-
+                EndBuilding();
+                currency.removeCurrency(towerCost);
+                power.addPowerusage(5);
+                //shopManager.BuyTower(currentTowerPlacing);
             }else{
                 Debug.Log("Not enough money! Can't buy this tower yet");
             }
@@ -96,19 +95,28 @@ public class PlacementManager : MonoBehaviour
 
     public void StartBuilding(GameObject towerToBuild){
 
-        isBuilding = true;
-
         currentTowerPlacing = towerToBuild;
 
-        dummyPlacement = Instantiate(currentTowerPlacing);
+        towerCost = currentTowerPlacing.GetComponent<Tower>().getCost();
 
-        if(dummyPlacement.GetComponent<Tower>() != null){
-            Destroy(dummyPlacement.GetComponent<Tower>());
+
+        if(currency.getCurrency() >= towerCost && power.getPowerCap() >= power.getPowerUsage()){
+            isBuilding = true;
+
+            dummyPlacement = Instantiate(currentTowerPlacing);
+
+
+            if(dummyPlacement.GetComponent<Tower>() != null){
+                Destroy(dummyPlacement.GetComponent<Tower>());
+            }
+
+            if(dummyPlacement.GetComponent<BarrelRotation>() != null){
+                Destroy(dummyPlacement.GetComponent<BarrelRotation>());
+            }
+        }else{
+            Debug.Log("Not enough money or power usage is full!");
         }
 
-        if(dummyPlacement.GetComponent<BarrelRotation>() != null){
-            Destroy(dummyPlacement.GetComponent<BarrelRotation>());
-        }
 
 
     }
@@ -124,7 +132,9 @@ public class PlacementManager : MonoBehaviour
 
     public void Update(){
 
+
         if(isBuilding == true){
+            Debug.Log("Building is true");
 
             if(dummyPlacement != null){
 
@@ -137,6 +147,7 @@ public class PlacementManager : MonoBehaviour
 
             if(Input.GetButtonDown("Fire1")){
                 PlaceBuilding();
+                Debug.Log("Placed tower");
             }
         }
     }
