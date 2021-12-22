@@ -822,6 +822,7 @@ GameObject:
   - component: {fileID: 633119616}
   - component: {fileID: 633119618}
   - component: {fileID: 633119617}
+  - component: {fileID: 633119619}
   m_Layer: 0
   m_Name: CpuRes
   m_TagString: Untagged
@@ -890,6 +891,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633119615}
   m_CullTransparentMesh: 1
+--- !u!114 &633119619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633119615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a7786651183d442a01e12305609df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &706838829
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,8 +936,9 @@ MonoBehaviour:
   dummyPlacement: {fileID: 4965700095893934644, guid: 351f8f6909589dd4187453524f8f10e7, type: 3}
   shopManager: {fileID: 50347931}
   currency: {fileID: 1746152819}
-  cost: 50
-  computer: {fileID: 879182376}
+  computer: {fileID: 2071761278}
+  power: {fileID: 879182376}
+  tower: {fileID: 3671042885791232220, guid: 7d1fdcb298d3d044c85f0a439c859ac7, type: 3}
   cam: {fileID: 519420031}
   hoverTile: {fileID: 0}
   mask:
@@ -1264,8 +1278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 30.374893, y: 0}
-  m_SizeDelta: {x: 11.589973, y: -8.87001}
+  m_AnchoredPosition: {x: 30.374893, y: 2.2174997}
+  m_SizeDelta: {x: 11.59, y: -4.435}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879182374
 MonoBehaviour:
@@ -1289,7 +1303,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
@@ -1318,7 +1332,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 879182372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a7786651183d442a01e12305609df7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea9da64b369ca7341a41861e7d8cf900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1046906658
@@ -2151,6 +2165,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11500000, guid: 9608824253158834d8f6dae1d523d607, type: 3}
+        m_TargetAssemblyTypeName: PlacementManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561378132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,6 +2821,7 @@ GameObject:
   - component: {fileID: 2071761275}
   - component: {fileID: 2071761277}
   - component: {fileID: 2071761276}
+  - component: {fileID: 2071761278}
   m_Layer: 0
   m_Name: CeleconResource
   m_TagString: Untagged
@@ -2863,3 +2890,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071761274}
   m_CullTransparentMesh: 1
+--- !u!114 &2071761278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071761274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a7786651183d442a01e12305609df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

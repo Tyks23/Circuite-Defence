@@ -56,13 +56,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9a05724e0256e3c46875bb2568ce9e4f, type: 3}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
+      propertyPath: cost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: range
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 3310251501511813672, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
+    - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
+      propertyPath: damage
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: timeBetweenShots
       value: 1

@@ -18,9 +18,20 @@ public class Power : MonoBehaviour
     {
         PowerText.text = PowerUsage + "/" + PowerCap;
     }
+
     public void addPowerusage(int x)
     {
         PowerUsage += x;
+    }
+
+    public int getPowerUsage()
+    {
+        return PowerUsage;
+    }
+
+    public int getPowerCap()
+    {
+        return PowerCap;
     }
 
     public void removePowerusage(int x)

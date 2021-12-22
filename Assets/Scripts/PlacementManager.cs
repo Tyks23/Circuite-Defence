@@ -11,8 +11,9 @@ public class PlacementManager : MonoBehaviour
     //resource stuff
     public ShopManager shopManager;
     public Currency currency;
-    [SerializeField] int cost;
     public Computing computer;
+    public Power power;
+    public Tower tower;
 
     private GameObject currentTowerPlacing;
     
@@ -69,7 +70,7 @@ public class PlacementManager : MonoBehaviour
 
             if(CheckForTower() == false){
 
-                if(currency.getCurrency() >= cost){
+                if(currency.getCurrency() >= tower.getCost() && power.getPowerCap() >= power.getPowerUsage()){
 
                     GameObject newTowerObject = Instantiate(currentTowerPlacing);
                     newTowerObject.layer = LayerMask.NameToLayer("Tower");
@@ -77,8 +78,8 @@ public class PlacementManager : MonoBehaviour
 
                     EndBuilding();
                     shopManager.BuyTower(currentTowerPlacing);
-                    currency.removeCurrency(cost);
-                    computer.addCEusage(10);
+                    currency.removeCurrency(tower.getCost());
+                    power.addPowerusage(5);
                 }else{
                     //currency.currencyText.text = string.Format("<color=lime>{0}</color>", currency.getCurrency());
                     Debug.Log("Not enough money");
