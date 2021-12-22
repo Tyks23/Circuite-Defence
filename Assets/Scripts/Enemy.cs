@@ -11,8 +11,6 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float movementSpeed;
 
-    private int killReward = 20; // The amount of money the player gets when the enemy is killed
-
     private int damage; // the amount of damage the enemy does when it reaches the end
 
     private GameObject targetTile;
