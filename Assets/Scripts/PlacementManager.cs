@@ -116,9 +116,6 @@ public class PlacementManager : MonoBehaviour
         }else{
             Debug.Log("Not enough money or power usage is full!");
         }
-
-
-
     }
 
     public void EndBuilding(){
@@ -127,6 +124,13 @@ public class PlacementManager : MonoBehaviour
 
         if(dummyPlacement != null){
             Destroy(dummyPlacement);
+        }
+    }
+
+    public void SetPowerCap(){
+        if(currency.getCurrency() >= 500){
+            currency.removeCurrency(500);
+            power.addPowercap(10);
         }
     }
 
