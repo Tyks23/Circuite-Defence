@@ -93,26 +93,31 @@ public class PlacementManager : MonoBehaviour
 
     public void StartBuilding(GameObject towerToBuild){
 
-        currentTowerPlacing = towerToBuild;
+        if(power.getPowerUsage() < power.getPowerCap()){
+            currentTowerPlacing = towerToBuild;
 
-        towerCost = currentTowerPlacing.GetComponent<Tower>().getCost();
+            towerCost = currentTowerPlacing.GetComponent<Tower>().getCost();
 
-        if(currency.getCurrency() >= towerCost && power.getPowerCap() >= power.getPowerUsage()){
-            isBuilding = true;
+            if(currency.getCurrency() >= towerCost){
+                isBuilding = true;
 
-            dummyPlacement = Instantiate(currentTowerPlacing);
+                dummyPlacement = Instantiate(currentTowerPlacing);
 
 
-            if(dummyPlacement.GetComponent<Tower>() != null){
-                Destroy(dummyPlacement.GetComponent<Tower>());
-            }
+                if(dummyPlacement.GetComponent<Tower>() != null){
+                    Destroy(dummyPlacement.GetComponent<Tower>());
+                }
 
-            if(dummyPlacement.GetComponent<BarrelRotation>() != null){
-                Destroy(dummyPlacement.GetComponent<BarrelRotation>());
+                if(dummyPlacement.GetComponent<BarrelRotation>() != null){
+                    Destroy(dummyPlacement.GetComponent<BarrelRotation>());
+                }
+            }else{
+                Debug.Log("Not enough money");
             }
         }else{
-            Debug.Log("Not enough money or power usage is full!");
+            Debug.Log("Power usage is full!")
         }
+        
     }
 
     public void EndBuilding(){
