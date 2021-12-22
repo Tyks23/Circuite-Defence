@@ -82,7 +82,6 @@ public class PlacementManager : MonoBehaviour
 
                 EndBuilding();
                 currency.removeCurrency(towerCost);
-                power.addPowerusage(5);
                 //shopManager.BuyTower(currentTowerPlacing);
             }else{
                 Debug.Log("Not enough money! Can't buy this tower yet");
@@ -151,6 +150,7 @@ public class PlacementManager : MonoBehaviour
 
             if(Input.GetButtonDown("Fire1")){
                 PlaceBuilding();
+                power.addPowerusage(5);
                 Debug.Log("Placed tower");
             }
         }
