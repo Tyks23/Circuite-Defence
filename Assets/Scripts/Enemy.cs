@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour
         enemyHealth -= amount;
         if(enemyHealth <= 0)
         {
-            
             die();
         }
     }

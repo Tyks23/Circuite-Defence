@@ -19,7 +19,7 @@ public class RoundController : MonoBehaviour
     {
         if( countdown <= 0f){
             StartCoroutine("SpawnWave");
-            countdown = timeBetweenWaves;
+            countdown = timeBetweenWaves + 1;
         }
 
         countdown -= Time.deltaTime;
