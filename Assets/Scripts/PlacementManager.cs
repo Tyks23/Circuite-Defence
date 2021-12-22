@@ -66,7 +66,6 @@ public class PlacementManager : MonoBehaviour
         return towerOnSlot;
     }
 
-
     public void PlaceBuilding(){
 
         //towerCost = Instantiate(currentTowerPlacing).GetComponent<Tower>().getCost();
@@ -97,7 +96,6 @@ public class PlacementManager : MonoBehaviour
         currentTowerPlacing = towerToBuild;
 
         towerCost = currentTowerPlacing.GetComponent<Tower>().getCost();
-
 
         if(currency.getCurrency() >= towerCost && power.getPowerCap() >= power.getPowerUsage()){
             isBuilding = true;
