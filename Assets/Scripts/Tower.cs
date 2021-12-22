@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
    [SerializeField] private float range;
    [SerializeField] private float damage;
    [SerializeField] private float timeBetweenShots;
+   [SerializeField] public int cost;
    public GameObject currentTarget;
 
 
@@ -16,6 +17,10 @@ public class Tower : MonoBehaviour
     private void Start()
     {
         nextTimeToShoot = Time.time;
+    }
+    public int getCost()
+    {
+        return cost;
     }
 
     private void updateNearestEnemy()

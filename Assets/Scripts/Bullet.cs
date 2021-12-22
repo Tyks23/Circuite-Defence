@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
-          
+
     private void Update()
     {
         transform.position += transform.right * speed;
