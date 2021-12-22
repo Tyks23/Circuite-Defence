@@ -115,7 +115,7 @@ public class PlacementManager : MonoBehaviour
                 Debug.Log("Not enough money");
             }
         }else{
-            Debug.Log("Power usage is full!")
+            Debug.Log("Power usage is full!");
         }
         
     }
