@@ -180,14 +180,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9608824253158834d8f6dae1d523d607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 4
+  range: 6
   damage: 50
-  timeBetweenShots: 1.5
+  timeBetweenShots: 1.2
   cost: 100
   currentTarget: {fileID: 0}
   pivot: {fileID: 8794593664974801296}
   barrel: {fileID: 7978027262587439142}
-  bullet: {fileID: 2994548563087997218, guid: 5c79f43474cca764a9122101e3725042, type: 3}
+  bullet: {fileID: 3310251501511813672, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
 --- !u!114 &7225703661872976282
 MonoBehaviour:
   m_ObjectHideFlags: 0

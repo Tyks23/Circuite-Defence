@@ -60,8 +60,12 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2994548563087997218, guid: 5c79f43474cca764a9122101e3725042, type: 3}
+    - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: timeBetweenShots
-      value: 1.3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6753133145860118971, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: m_Name

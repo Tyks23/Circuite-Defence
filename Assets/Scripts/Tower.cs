@@ -48,6 +48,8 @@ public class Tower : MonoBehaviour
         if(distance <= range)
         {
             currentTarget = currentNearestEnemy;
+        }else{
+            currentTarget = null;
         }
     }
 
