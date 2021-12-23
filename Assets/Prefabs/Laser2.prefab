@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3061723955901096622, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: speed
-      value: 0.04
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 2495925669802861501, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_Time
@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2495925669802861501, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2495925669802861501, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_SortingOrder
