@@ -11,19 +11,19 @@ D:\Unity Hub\2020.3.25f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Gaspar/Desktop/Ülikool/2021Sügis/Arvutimängud/Circuite-Defence
+C:/Users/Gaspar/Desktop/Ãœlikool/2021SÃ¼gis/ArvutimÃ¤ngud/Circuite-Defence
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
 58557
-Successfully changed project path to: C:/Users/Gaspar/Desktop/Ülikool/2021Sügis/Arvutimängud/Circuite-Defence
-C:/Users/Gaspar/Desktop/Ülikool/2021Sügis/Arvutimängud/Circuite-Defence
+Successfully changed project path to: C:/Users/Gaspar/Desktop/Ãœlikool/2021SÃ¼gis/ArvutimÃ¤ngud/Circuite-Defence
+C:/Users/Gaspar/Desktop/Ãœlikool/2021SÃ¼gis/ArvutimÃ¤ngud/Circuite-Defence
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 65.92 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path D:/Unity Hub/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Gaspar/Desktop/Ülikool/2021Sügis/Arvutimängud/Circuite-Defence/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Gaspar/Desktop/Ãœlikool/2021SÃ¼gis/ArvutimÃ¤ngud/Circuite-Defence/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
