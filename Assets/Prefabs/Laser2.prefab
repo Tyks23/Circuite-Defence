@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7841992672784975858, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7841992672784975858, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 12.8
       objectReference: {fileID: 0}
@@ -77,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5960499632874054296, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_Simulated
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5960499632874054296, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_LinearDrag
@@ -97,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5960499632874054296, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_UseFullKinematicContacts
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6723175162731410173, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_RootOrder
@@ -173,6 +177,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7839353465850873179, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839353465850873179, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
