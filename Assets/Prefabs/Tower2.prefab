@@ -61,19 +61,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: range
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 3310251501511813672, guid: 7897ba8768bae4b479894e02b95c94f0, type: 3}
+      objectReference: {fileID: 5192796389188231330, guid: e9bf8166417df4341a145736b98990ef, type: 3}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: damage
-      value: 100
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5743746096233291700, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: timeBetweenShots
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6753133145860118971, guid: a2c1dd8b2f8a4e84d90f7599abd1e249, type: 3}
       propertyPath: m_Name

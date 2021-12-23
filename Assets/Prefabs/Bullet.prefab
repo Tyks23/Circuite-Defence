@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5853603011206800307}
   - component: {fileID: 1495875076192148711}
   - component: {fileID: 7989977224979245169}
-  - component: {fileID: -8624466761425653279}
   - component: {fileID: 4373772915750109908}
   - component: {fileID: 1095812718155508206}
+  - component: {fileID: 6735980256447093495}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2994548563087997218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.43, y: -1.73, z: 0}
-  m_LocalScale: {x: -0.34280226, y: 0.38305008, z: 1}
+  m_LocalPosition: {x: -11.8198, y: -3.2136, z: 1}
+  m_LocalScale: {x: -0.20147085, y: 0.1993218, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -796275653
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2a1ebb906cf111140bbe90af84827e8d, type: 3}
-  m_Color: {r: 0.24705884, g: 0.61960787, b: 0.7176471, a: 1}
+  m_Color: {r: 0.81247777, g: 0.9310587, b: 0.9622642, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,33 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de485acd951ff4248ace295bf4d4a14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
---- !u!61 &-8624466761425653279
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2994548563087997218}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
-  m_EdgeRadius: 0
+  speed: 0.06
 --- !u!50 &4373772915750109908
 Rigidbody2D:
   serializedVersion: 4
@@ -134,7 +108,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2994548563087997218}
   m_BodyType: 1
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
@@ -144,7 +118,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!96 &1095812718155508206
 TrailRenderer:
@@ -184,10 +158,10 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -796275653
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Time: 0.07
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -195,8 +169,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.26190567
-        value: 0.31132126
+        time: 0.06078752
+        value: 0.23990184
         inSlope: -0.8241509
         outSlope: -0.8241509
         tangentMode: 0
@@ -204,7 +178,25 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.29761904
       - serializedVersion: 3
-        time: 1
+        time: 0.35215014
+        value: 0.099998474
+        inSlope: 0.98834026
+        outSlope: 0.98834026
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.89467293
+      - serializedVersion: 3
+        time: 0.6312786
+        value: 0
+        inSlope: -0.5984802
+        outSlope: -0.5984802
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.30105236
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.92736816
         value: 0
         inSlope: 0
         outSlope: 0
@@ -217,10 +209,10 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.19607845, g: 0.49411768, b: 0.57254905, a: 1}
-      key1: {r: 0.18178178, g: 0.74738365, b: 0.8962264, a: 0.24313726}
-      key2: {r: 0.8703047, g: 0.7985401, b: 0.009085766, a: 0}
-      key3: {r: 0.7960785, g: 0.8000001, b: 0, a: 0}
+      key0: {r: 0.629717, g: 0.79589224, b: 0.8396226, a: 1}
+      key1: {r: 0.48104307, g: 0.8025385, b: 0.8867924, a: 0.24313726}
+      key2: {r: 0.55460125, g: 0.9301428, b: 0.9716981, a: 0}
+      key3: {r: 0.9796575, g: 0.9811321, b: 0.6803133, a: 0}
       key4: {r: 0.7960785, g: 0.8000001, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
@@ -253,3 +245,29 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!61 &6735980256447093495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994548563087997218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.018997833, y: -0.038407296}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.85561454, y: 0.83101016}
+  m_EdgeRadius: 0

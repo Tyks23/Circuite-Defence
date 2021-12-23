@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Bullet
   - Tower
   - DummyPlacement
   - 
@@ -48,11 +48,11 @@ TagManager:
   - name: Tower
     uniqueID: 1255525601
     locked: 0
-  - name: Bullet
-    uniqueID: 3498691643
-    locked: 0
   - name: TowerBarrel
     uniqueID: 3737012319
+    locked: 0
+  - name: Bullet
+    uniqueID: 3498691643
     locked: 0
   - name: Enemy
     uniqueID: 1675351367
