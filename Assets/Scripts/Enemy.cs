@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour
     private int damage; // the amount of damage the enemy does when it reaches the end
 
     private GameObject targetTile;
+    //public GameOverScreen GameOverScreen;
 
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class Enemy : MonoBehaviour
 
     private void initializeEnemy()
     {
+        
         targetTile = MapGenerator.startTile;
     }
 
@@ -43,7 +46,11 @@ public class Enemy : MonoBehaviour
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
         Health.health -= 1;
+        /*if(Healt.health == 0){
+            GameOverScreen.Setup();
+        }*/
     }
+
 
     private void die()
     {
@@ -87,6 +94,6 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         checkPosition();
-        moveEnemy();    
+        moveEnemy();
     }
 }
